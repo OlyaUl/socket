@@ -28,6 +28,13 @@ def app(environ, start_response):
     data = parse_qs(data)
     return [('%s=%s\n' % (k, str(v))).encode('UTF-8') for k, v in data.items()]
 
+'''path_info = '/path/123'
+p = path_info.split('/')
+if p[0] == 'path':
+    id = p[1]
+elif p[0] = ..
+   '''
+
 httpserv = make_server('localhost', 8080, app)
 httpserv.serve_forever()
 
